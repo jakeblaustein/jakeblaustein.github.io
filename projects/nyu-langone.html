@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYU Langone Health | Jake Blaustein</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">JB</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html" class="active">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="label">Nov 2022 – June 2024 · New York, NY</span>
+        <h1 class="xl">NYU Langone Health</h1>
+      </div>
+      <p>Research on how historical redlining in New York City relates to particulate air pollution and to cardiovascular health disparities.</p>
+    </section>
+
+    <dl class="facts">
+      <div><dt>Role</dt><dd>Research Assistant</dd></div>
+      <div><dt>Output</dt><dd>2 first-author papers, 3 national conferences</dd></div>
+      <div><dt>Tools</dt><dd>R / RStudio, mixed-effects models, data visualization</dd></div>
+    </dl>
+
+    <section class="detail">
+      <h2>The study</h2>
+      <ul class="highlights">
+        <li><strong>The question:</strong> in the 1930s, the federal Home Owners&rsquo; Loan Corporation graded neighborhoods from A to D, a practice now known as redlining. Formerly redlined areas are known to have worse outdoor air. We asked whether that carries indoors, where people spend about 90% of their time, and whether air purifiers can close the gap.</li>
+        <li><strong>The trial:</strong> a randomized, double-blind, sham-controlled trial in the homes of 44 New York City area adults with hypertension. Each home got either a real HEPA portable air cleaner or a sham one for four weeks, while a monitor in the same room logged fine particulate matter (PM<sub>2.5</sub>) every two minutes.</li>
+        <li><strong>My role:</strong> as first author, I helped conceive the analysis, worked through 600,000+ rows of air quality data in R using linear mixed-effects models, made the figures, and wrote the original draft.</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>What we found</h2>
+      <ul class="highlights">
+        <li><strong>Homes in formerly redlined neighborhoods had worse indoor air.</strong> Mean indoor PM<sub>2.5</sub> was 8.48 &micro;g/m&sup3; in grade C/D neighborhoods versus 3.12 &micro;g/m&sup3; elsewhere (p = 0.041).</li>
+        <li><strong>Air cleaners cut indoor pollution, most where it was worst.</strong> Real HEPA cleaners lowered PM<sub>2.5</sub> compared with sham units (p = 0.003), with a significantly larger drop in formerly redlined neighborhoods (p = 0.027). With filtration running, the two groups became nearly identical.</li>
+        <li><strong>Presentations:</strong> I presented this work at 3 national conferences and received the Outstanding Presentation Award at the 2nd Annual NYC Area Cardiovascular Research Retreat (2023).</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>Publications</h2>
+      <ul class="highlights">
+        <li><strong><a href="https://doi.org/10.1161/CIRCRESAHA.124.324486" target="_blank" rel="noopener">Residences in Historically Redlined Districts in New York City Area Have More Indoor Particulate Air Pollution Potentially Reducible by Portable Air Cleaners</a></strong><br>Blaustein JR, Moon HA, Long C, Bonanni LJ, Gordon T, Thorpe LE, Newman JD, Wittkopp S. <em>Circulation Research</em>. 2024;135(1):e1&ndash;e3.</li>
+        <li><strong><a href="https://doi.org/10.1161/CIRCRESAHA.123.323613" target="_blank" rel="noopener">Environmental Impacts on Cardiovascular Health and Biology: An Overview</a></strong><br>Blaustein JR, Quisel MJ, Hamburg NM, Wittkopp S. <em>Circulation Research</em>. 2024;134(9):1048&ndash;1060.<br>A review of how air and noise pollution, light at night, and climate-related hazards affect the heart and blood vessels, the biological pathways involved, and strategies to reduce exposure.</li>
+      </ul>
+    </section>
+
+    <section class="figures natural">
+      <figure>
+        <img src="../images/nyu-award.jpg" alt="Jake Blaustein holding the Outstanding Presentation Award certificate at the NYC Area Cardiovascular Research Retreat">
+        <figcaption>Receiving the Outstanding Presentation Award, September 2023.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/nyu-figure.png" alt="Five-panel figure showing indoor PM2.5 by study arm, a map of HOLC grades with participant locations, daily PM2.5 for sham and true arms, and overall treatment effects">
+        <figcaption>Indoor PM<sub>2.5</sub> by study arm and HOLC grade, from the published letter.</figcaption>
+      </figure>
+    </section>
+
+    <a href="../projects.html" class="back-link">&larr; Back to Projects</a>
+  </main>
+</body>
+</html>

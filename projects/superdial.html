@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperDial | Jake Blaustein</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">JB</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html" class="active">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="label">May 2026 – Aug 2026 · New York, NY</span>
+        <h1 class="xl">SuperDial</h1>
+      </div>
+      <p>SuperDial is a healthcare AI startup whose LLM voice agents automate phone calls between providers and insurers for revenue cycle management.</p>
+    </section>
+
+    <dl class="facts">
+      <div><dt>Role</dt><dd>Agent Operations Intern</dd></div>
+      <div><dt>Focus</dt><dd>AI call logic, quality, delivery</dd></div>
+      <div><dt>Tools</dt><dd>Python, SQL, LLMs</dd></div>
+    </dl>
+
+    <section class="detail">
+      <h2>What I did</h2>
+      <ul class="highlights">
+        <li><strong>Owned ~$3M ARR of customer operations</strong> end to end. For every customer I was assigned, I was the main owner of the five core operating metrics: quality, delivery, inputs, phone numbers, and call scripting.</li>
+        <li><strong>Managed success rates across my customer portfolio,</strong> digging into failed calls to find root causes instead of patching individual cases.</li>
+        <li><strong>Served as a main point of contact for 400+ offshore callers, auditors, and team leads,</strong> and helped the team leads take over batch management and quality-control assignment.</li>
+        <li><strong>Built Python/SQL operations tooling,</strong> including an automated LLM QA system, customer dashboards, and portal UI updates.</li>
+        <li><strong>Investigated AI agent behavior</strong> and supported quality initiatives on other high-priority customers.</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>Results</h2>
+      <ul class="highlights">
+        <li><strong>Success rate up 13.2 points (79.1% &rarr; 92.3%) for a key customer, May to July.</strong><br>I found a widespread member ID formatting issue with one major insurer that caused about half of all failures and touched roughly 10% of calls. I pushed for input validation, which alone added about 9 points. I also rebuilt the customer&rsquo;s AI call script with better network-status verification and customer-specific instructions to raise AI completion and quality and cut turnaround time.</li>
+        <li><strong>Incorrect-input rate cut from 26.1% to 11.0% for a second customer.</strong><br>I traced a wide range of input and routing failures across payers, including plan misrouting that caused member ID failures, missing fax numbers, PO box address errors, missing provider and claim numbers, misformatted Medicare provider IDs, and billing-name mismatches. Alongside the rest of the team, this lifted the customer&rsquo;s success rate from 64.6% to 77.6% and unlocked more volume: 83K calls in July, up from 63K in May.</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>Tools I built</h2>
+      <ul class="highlights">
+        <li><strong>Weekly update Slack bot:</strong> posts each customer&rsquo;s results and a detailed breakdown of failures from the past week to that customer&rsquo;s internal channel, which set the direction for the next week&rsquo;s improvement work.</li>
+        <li><strong>Do-not-call list:</strong> filters out dead, spam, and wrong-entity phone lines to cut phone failures across every customer.</li>
+        <li><strong>Daily audit queue:</strong> automates the morning audit sheet so audits no longer have to be assigned by hand.</li>
+        <li><strong>Payer-specific fixes:</strong> custom phone-menu instructions and workarounds for difficult insurers, such as an automated-menu bypass for one major insurer and mapping another payer&rsquo;s AI phone agent.</li>
+        <li><strong>Portal updates:</strong> pull requests that improved the internal quality-management portal for the operations team.</li>
+      </ul>
+    </section>
+
+    <section class="figures">
+      <figure>
+        <img src="../images/superdial-team.jpg" alt="The SuperDial team together at a restaurant in New York">
+        <figcaption>The SuperDial team in New York, summer 2026.</figcaption>
+      </figure>
+    </section>
+
+    <a href="../projects.html" class="back-link">&larr; Back to Projects</a>
+  </main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom FPV Quadcopter | Jake Blaustein</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">JB</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html" class="active">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="label">Oct 2025 – Present · Personal Project</span>
+        <h1 class="xl">Custom FPV Quadcopter</h1>
+      </div>
+      <p>An FPV quadcopter I designed, assembled, and configured from individual components, then debugged until it flew stably.</p>
+    </section>
+
+    <dl class="facts">
+      <div><dt>Role</dt><dd>Designer &amp; Builder</dd></div>
+      <div><dt>Focus</dt><dd>Propulsion, electronics integration, flight tuning</dd></div>
+      <div><dt>Tools &amp; Hardware</dt><dd>SolidWorks, CF-PLA printing, Betaflight, ExpressLRS</dd></div>
+    </dl>
+
+    <section class="detail">
+      <h2>How it works</h2>
+      <ul class="highlights">
+        <li><strong>Power:</strong> a LiPo battery feeds a 4-in-1 BLHeli32 electronic speed controller (ESC), which distributes power to all four brushless motors.</li>
+        <li><strong>Control:</strong> the flight controller takes throttle and stick commands and continuously adjusts each motor&rsquo;s speed to control roll, pitch, yaw, and total thrust. The ESC turns those commands into commutation for each three-phase motor.</li>
+        <li><strong>Radio link:</strong> a BetaFPV Nano ExpressLRS receiver and LiteRadio 2 SE transmitter give a low-latency link between pilot and aircraft.</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>What I built</h2>
+      <ul class="highlights">
+        <li><strong>Propulsion:</strong> sized four ECO II 2807 1300KV brushless motors and 7 &times; 4.5 in propellers to the aircraft&rsquo;s thrust needs. The 2807 motors have the torque to swing large props efficiently. I chose 1600&ndash;2200 mAh LiPo batteries to balance flight time against added weight.</li>
+        <li><strong>Frame:</strong> modeled the frame geometry in SolidWorks and 3D printed the parts in carbon-fiber-reinforced PLA.</li>
+        <li><strong>Frame loads:</strong> at full thrust, each motor puts a bending load on its arm on top of vibration, maneuvering, and landing loads. I modeled each arm as a cantilever with a point load at the motor, M<sub>root</sub> = F<sub>motor</sub> &middot; L<sub>arm</sub>, as a basis for checking stiffness, bending stress, and factor of safety.</li>
+        <li><strong>Electronics:</strong> assembled and wired the full electrical system: battery, ESC, motors, flight controller, and receiver.</li>
+        <li><strong>Flight configuration:</strong> set up and tuned the flight controller in Betaflight after assembly, then worked through the problems that came up in early testing: arming behavior, AirMode configuration, and an unstable hover.</li>
+        <li><strong>Troubleshooting:</strong> rather than treating each problem as a software bug, I traced it through the whole system, from transmitter inputs and the receiver link to controller settings, ESC output, motor direction, and how the aircraft actually responded.</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>What I learned</h2>
+      <ul class="highlights">
+        <li><strong>Hands-on experience:</strong> brushless propulsion, power electronics, embedded flight control, radio communication, mechanical integration, and system-level troubleshooting.</li>
+        <li><strong>A drone is one electromechanical system.</strong> Motor choice set the structural loads, battery choice traded power against mass, and small configuration errors could substantially change how it flew.</li>
+        <li><strong>Where I want to work:</strong> the project strengthened my interest in engineering at the intersection of mechanical hardware, robotics, and autonomous systems, where good mechanical design depends on understanding the electronics and controls around it.</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>Next steps</h2>
+      <ul class="highlights">
+        <li><strong>Thermal search:</strong> integrating a thermal camera so the quadcopter can support search and rescue operations.</li>
+      </ul>
+    </section>
+
+    <section class="figures natural">
+      <figure>
+        <img src="../images/quadcopter.jpg" alt="Top-down view of the assembled black quadcopter with four propellers on a workbench">
+        <figcaption>The assembled quadcopter.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/quadcopter-frame-cad.png" alt="SolidWorks model of the X-shaped quadcopter frame with four arms and a stacked center body">
+        <figcaption>The frame I modeled in SolidWorks.</figcaption>
+      </figure>
+    </section>
+
+    <a href="../projects.html" class="back-link">&larr; Back to Projects</a>
+  </main>
+</body>
+</html>
