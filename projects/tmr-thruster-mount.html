@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thruster Mount FEA | Jake Blaustein</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">JB</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html" class="active">Projects</a>
+      <a href="../resume.html">Resume</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="label">Texas Marine Robotics · Structural Analysis</span>
+        <h1 class="xl">Thruster Mount FEA</h1>
+      </div>
+      <p>Finite element analysis of the custom mount that holds our Blue Robotics T200 thrusters to the hull of our autonomous surface vessel.</p>
+    </section>
+
+    <dl class="facts">
+      <div><dt>Result</dt><dd>Minimum factor of safety &asymp; 2.4</dd></div>
+      <div><dt>Load case</dt><dd>59 N thrust, T200 at 18 V</dd></div>
+      <div><dt>Tools</dt><dd>SolidWorks Simulation</dd></div>
+    </dl>
+
+    <section class="detail">
+      <h2>The mount</h2>
+      <ul class="highlights">
+        <li><strong>Three parts:</strong> a 3D-printed PLA coupler, a commercial Sea Eagle universal skeg mounting base, and a retaining clip.</li>
+        <li><strong>How it goes together:</strong> the thruster bolts to the coupler with four M4 screws. The coupler slides into the skeg base and is locked in place by the retaining clip.</li>
+        <li><strong>Why this design:</strong> thrusters can be installed and removed quickly while keeping a secure mechanical connection to the hull.</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>The analysis</h2>
+      <ul class="highlights">
+        <li><strong>Setup:</strong> modeled the full assembly in SolidWorks Simulation with a fixed connection at the hull and a 59 N thrust load, matching the T200&rsquo;s output at 18 V.</li>
+        <li><strong>Outputs:</strong> von Mises stress, displacement, and factor of safety, used to find likely failure points.</li>
+      </ul>
+    </section>
+
+    <section class="detail">
+      <h2>What I found</h2>
+      <ul class="highlights">
+        <li><strong>Minimum factor of safety of about 2.4</strong> across the assembly under full thrust.</li>
+        <li><strong>Stress concentrates at the thruster screws.</strong> Peak von Mises stress, about 25 MPa, occurs around the M4 screws that join the thruster to the coupler.</li>
+        <li><strong>Deflection is small.</strong> Maximum displacement is about 0.7 mm, at the top of the thruster duct.</li>
+        <li><strong>Why it matters:</strong> the results confirmed the mount&rsquo;s structural reliability and pointed to the screw region as the place to focus future design improvements.</li>
+      </ul>
+    </section>
+
+    <section class="figures natural">
+      <figure>
+        <img src="../images/tmr-mount-stress.png" alt="SolidWorks von Mises stress plot of the thruster, coupler, and skeg base under a 59 N thrust load">
+        <figcaption>Von Mises stress across the full mount assembly.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/tmr-mount-displacement.png" alt="SolidWorks displacement plot showing the thruster duct deflecting up to about 0.7 mm">
+        <figcaption>Displacement under thrust, peaking at about 0.7 mm at the top of the duct.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/tmr-mount-coupler-stress.png" alt="Close-up stress plot of the PLA coupler showing peak stress around the M4 screw holes">
+        <figcaption>Close-up of the coupler: peak stress forms around the M4 thruster screws.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/tmr-mount-mesh.png" alt="Finite element mesh of the thruster mount assembly with the thrust load arrows">
+        <figcaption>The finite element mesh with the applied thrust load.</figcaption>
+      </figure>
+    </section>
+
+    <a href="../projects.html" class="back-link">&larr; Back to Projects</a>
+  </main>
+</body>
+</html>
