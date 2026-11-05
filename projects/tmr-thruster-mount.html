@@ -36,29 +36,25 @@
 
     <section class="detail">
       <h2>The mount</h2>
-      <ul class="highlights">
-        <li><strong>Three parts:</strong> a 3D-printed PLA coupler, a commercial Sea Eagle universal skeg mounting base, and a retaining clip.</li>
-        <li><strong>How it goes together:</strong> the thruster bolts to the coupler with four M4 screws. The coupler slides into the skeg base and is locked in place by the retaining clip.</li>
-        <li><strong>Why this design:</strong> thrusters can be installed and removed quickly while keeping a secure mechanical connection to the hull.</li>
-      </ul>
+      <div class="prose">
+        <p>Our custom mounting system for the Blue Robotics T200 thrusters has three parts: a 3D-printed PLA coupler, a commercially available Sea Eagle universal skeg mounting base, and a retaining clip. The thruster attaches to the coupler with four M4 screws, and the coupler slides into the skeg base, where the retaining clip locks it in place.</p>
+        <p>The design lets us install and remove thrusters quickly while still keeping a secure mechanical connection to the hull.</p>
+      </div>
     </section>
 
     <section class="detail">
       <h2>The analysis</h2>
-      <ul class="highlights">
-        <li><strong>Setup:</strong> modeled the full assembly in SolidWorks Simulation with a fixed connection at the hull and a 59 N thrust load, matching the T200&rsquo;s output at 18 V.</li>
-        <li><strong>Outputs:</strong> von Mises stress, displacement, and factor of safety, used to find likely failure points.</li>
-      </ul>
+      <div class="prose">
+        <p>To check the mount&rsquo;s structural integrity under operating conditions, I ran finite element analysis in SolidWorks Simulation. I modeled the full assembly with a fixed connection at the hull and applied a 59 N thrust load, matching the T200&rsquo;s output at 18 V. I then looked at von Mises stress, displacement, and factor of safety to find where the mount would be most likely to fail.</p>
+      </div>
     </section>
 
     <section class="detail">
       <h2>What I found</h2>
-      <ul class="highlights">
-        <li><strong>Minimum factor of safety of about 2.4</strong> across the assembly under full thrust.</li>
-        <li><strong>Stress concentrates at the thruster screws.</strong> Peak von Mises stress, about 25 MPa, occurs around the M4 screws that join the thruster to the coupler.</li>
-        <li><strong>Deflection is small.</strong> Maximum displacement is about 0.7 mm, at the top of the thruster duct.</li>
-        <li><strong>Why it matters:</strong> the results confirmed the mount&rsquo;s structural reliability and pointed to the screw region as the place to focus future design improvements.</li>
-      </ul>
+      <div class="prose">
+        <p>The simulation showed a <strong>minimum factor of safety of about 2.4</strong>. Stress concentrated around the M4 screws that join the thruster to the coupler, peaking at about 25 MPa, while the rest of the assembly stayed lightly loaded. The mount also stayed stiff, with a maximum displacement of only about 0.7 mm at the top of the thruster duct.</p>
+        <p>These results confirmed that the mount is structurally reliable under full thrust and pointed to the screw region as the place to focus future design improvements.</p>
+      </div>
     </section>
 
     <section class="figures natural">
